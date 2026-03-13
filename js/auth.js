@@ -57,8 +57,9 @@ export function onAuthChange(callback) {
  */
 export async function requestPasswordReset(email) {
   const { data, error } = await supabase.auth.resetPasswordForEmail(email, {
-    redirectTo: `${window.location.origin}?view=reset-password`,
+    redirectTo: "https://netofrazao-dev.github.io/chamada-de-turma-pra-vender/?view=reset-password",
   });
+
   if (error) throw error;
   return data;
 }
